@@ -1,0 +1,59 @@
+{
+  "users": [],
+  "categories": [
+    {
+      "name": "điện thoại ",
+      "id": 1
+    },
+    {
+      "name": "máy tính ",
+      "id": 2
+    },
+    {
+      "name": "tai nghe",
+      "id": 3
+    },
+    {
+      "name": "laptop",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 16,
+      "name": "dvddvdv",
+      "originalPrice": 10,
+      "saleOffPrice": 2,
+      "feature": "scscsc",
+      "description": "scscscscscvdvv",
+      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658279512/oibg9cv1hixoaf2udwgt.jpg"
+    },
+    {
+      "img": "http://res.cloudinary.com/thaicodejj/image/upload/v1658251263/y6szraxlievkpkwbiohk.jpg",
+      "name": "dvddvdv",
+      "saleOffPrice": 2,
+      "feature": "fnfnf",
+      "description": "fnfnn",
+      "categoryId": 3,
+      "id": 18
+    },
+    {
+      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658276371/v6qnacyjf2pg1hgrsq7c.jpg",
+      "name": "dvdvdvd",
+      "saleOffPrice": 5,
+      "feature": "scscs",
+      "description": "scscs",
+      "categoryId": 2,
+      "id": 19
+    },
+    {
+      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658279109/n4fj6qyadntmc6ul4pvj.jpg",
+      "name": "dvd",
+      "saleOffPrice": 5,
+      "feature": "scsc",
+      "description": "svsvv",
+      "categoryId": 1,
+      "id": 20
+    }
+  ]
+}
