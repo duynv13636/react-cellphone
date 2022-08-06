@@ -11,6 +11,7 @@ import SigninPage from "./pages/Auth/signin";
 import AddCategoriesPage from "./pages/Admin/Categories/Add";
 import CategoriesAdminPage from "./pages/Admin/Categories/categories";
 import EditProductPage from "./pages/Admin/Product/Product_Edit";
+import SignupPage from "./pages/Auth/signup";
 
 function App(props: any) {
   return (
@@ -18,17 +19,18 @@ function App(props: any) {
       <Routes>
         {/* Auth */}
         <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         {/* User layout */}
         <Route path="/" element={<UserLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="detail" element={<DetailPage />} />
+          <Route path="detail/:id" element={<DetailPage />} />
         </Route>
         {/* Admin layout */}
         <Route path="admin" element={<AdminLayout />}>
           <Route index element={<ProductAdminPage />} />
           <Route path="product/add" element={<AddProductPage />} />
           <Route path="categories" element={<CategoriesAdminPage />} />
-          <Route path="categories/add" element={<AddCategoriesPage/>} />
+          <Route path="categories/add" element={<AddCategoriesPage />} />
           <Route path="product/edit/:id" element={<EditProductPage />} />
         </Route>
       </Routes>

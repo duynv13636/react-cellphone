@@ -61,7 +61,7 @@ const EditProductPage: React.FC = () => {
   };
   useEffect(() => {
     const get = async (id: string) => {
-      const { data } = await getProductId(id);
+      const  data = await getProductId(id);
       console.log(id);
       console.log(data);
       form.setFieldsValue(data);

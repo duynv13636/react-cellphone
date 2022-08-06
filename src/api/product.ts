@@ -20,7 +20,10 @@ export const deleteProduct = (id:string) => {
     return instance.delete(url)
 }
 export const getProductId = (id:string) => {
-    const url = "/products/"+id;
+        
+    const url = `/products/${id}`;
+    console.log(url);
+    
     return instance.get(url)
 }
 export const getProductCategory = (id:string) => {

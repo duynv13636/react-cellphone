@@ -13,6 +13,7 @@ export const upload = async (file: any) => {
   const { data } = await axios.post(CLOUNDINARY_URL, formData, {
     headers: { "Content-Type": "application/form-data" },
   });
+  console.log(data);
 
   return data.url;
 };

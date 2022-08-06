@@ -1,22 +1,18 @@
-import { Button, Col, Form, Input, message } from "antd";
-import React from "react";
-import { signin, signup } from "../../api/users";
-import { useNavigate } from "react-router-dom";
+import { Button, Checkbox, Col, Form, Input, message } from "antd";
+import React, { useEffect } from "react";
+import { signup } from "../../api/users";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const SigninPage: React.FC = () => {
+const SignupPage: React.FC = () => {
   const navigate = useNavigate();
   const onFinish = (values: any) => {
-    try {
-      const Signin = async () => {
-        const data = await signin(values);
-        message.success("Bạn đã đăng nhập thành công");
-        navigate("/");
-        console.log(data);
-      };
-      Signin();
-    } catch (error) {
-      console.log(error);
-    }
+    const Signup = async () => {
+      const data = await signup(values);
+      message.success("Bạn đã đăng ký thành công");
+      navigate("/signin");
+      console.log(data);
+    };
+    Signup();
 
     console.log("Success:", values);
   };
@@ -54,7 +50,7 @@ const SigninPage: React.FC = () => {
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            Đăng nhập
+            Đăng ký
           </Button>
         </Form.Item>
       </Form>
@@ -62,4 +58,4 @@ const SigninPage: React.FC = () => {
   );
 };
 
-export default SigninPage;
+export default SignupPage;

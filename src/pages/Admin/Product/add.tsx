@@ -33,6 +33,8 @@ const AddProductPage = () => {
   const onFinish = async (values: any) => {
     console.log("Success:", values);
     const imgLink = await upload(fileList[0]);
+    console.log(imgLink);
+    
     const valueAdd = {
       img: imgLink,
       name: values.name,
@@ -67,6 +69,7 @@ const AddProductPage = () => {
   };
   const onChange: UploadProps["onChange"] = ({ fileList: newFileList }) => {
     setfileList(newFileList);
+    console.log(newFileList);
   };
 
   const onPreview = async (file: UploadFile) => {
