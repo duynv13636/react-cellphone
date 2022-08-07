@@ -16,6 +16,7 @@ import LogoImage from "../../../assets/image/Rectangle.png";
 import { StarOutlined } from "@ant-design/icons";
 import { getProductId } from "../../../api/product";
 import { ProductType } from "../../../types/Product";
+import { useDispatch } from "react-redux";
 
 const style: React.CSSProperties = {
   background: "#ffffff",
@@ -45,6 +46,7 @@ const items2: MenuProps["items"] = [
 const DetailPage = () => {
   const [product, setProduct] = useState<ProductType[]>([]);
   const { id } = useParams();
+  const dispatch = useDispatch();
   useEffect(() => {
     const getProduct = async () => {
       const { data } = await getProductId(id as string);
@@ -52,6 +54,15 @@ const DetailPage = () => {
     };
     getProduct();
   }, []);
+  const addToCart = (item:any) => {
+  
+    
+    item.quantity = 1;
+    dispatch({
+      type: "cart/add",
+      payload: item,
+    });
+  };
   return (
     <>
       <Container>
@@ -79,7 +90,7 @@ const DetailPage = () => {
             <Col span={10}>
               <Dv2>
                 <div>
-                  <img src={product.img} width="250px" />
+                  <img src={product?.img} width="250px" />
                 </div>
                 <div>
                   <Row>
@@ -108,11 +119,11 @@ const DetailPage = () => {
                 <Row>
                   <Col span={8}>
                     <Title level={2} type="danger">
-                     {product.originalPrice}đ
+                     {product?.originalPrice}đ
                     </Title>
                   </Col>
                   <Col span={4}>
-                    <Text>{product.saleOffPrice}đ</Text>
+                    <Text>{product?.saleOffPrice}đ</Text>
                   </Col>
                 </Row>
               </div>
@@ -126,7 +137,7 @@ const DetailPage = () => {
               <Dv3>
                 <Row>
                   <Col span={10}>
-                    <Bot>Mua Ngay</Bot>
+                    <button onClick={()=>addToCart(product)}>Mua Ngay</button>
                   </Col>
                   <Col span={4}>
                     <Bot1>

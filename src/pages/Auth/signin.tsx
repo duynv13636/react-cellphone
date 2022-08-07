@@ -1,65 +1,124 @@
-import { Button, Col, Form, Input, message } from "antd";
+import { Button, Col, Form, Input, message, Row } from "antd";
 import React from "react";
-import { signin, signup } from "../../api/users";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { signin, signup } from "../../api/users";
+import image from "../../assets/images/logo.png";
 
-const SigninPage: React.FC = () => {
+type Props = {};
+
+const Signin = (props: Props) => {
+  const [form] = Form.useForm();
+
   const navigate = useNavigate();
-  const onFinish = (values: any) => {
+
+  const onFinish = async (value: any) => {
     try {
-      const Signin = async () => {
-        const data = await signin(values);
-        message.success("Bạn đã đăng nhập thành công");
-        navigate("/");
-        console.log(data);
-      };
-      Signin();
+      const { data } = await signin({
+        email: value.email,
+        password: value.password,
+      });
+      if (data) {
+        localStorage.setItem("username",JSON.stringify(data))
+        message.success("Đăng nhập thành công chuyển trang sau 2s !");
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      }
     } catch (error) {
-      console.log(error);
+      const e = error as any;
+      if (e.response.data === "Incorrect password") {
+        message.error("Mật khẩu không chính xác");
+      }
+      if (e.response.data === "Cannot find user") {
+        message.error("Email không tồn tại");
+      }
     }
-
-    console.log("Success:", values);
   };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
-
   return (
-    <Col span={12} offset={6}>
-      <Form
-        name="basic"
-        labelCol={{ span: 24 }}
-        //   wrapperCol={{ span: 16 }}
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-      >
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[{ required: true, message: "Không được bỏ trống!" }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Password"
-          name="password"
-          rules={[{ required: true, message: "Không được bỏ trống!" }]}
-        >
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
-            Đăng nhập
-          </Button>
-        </Form.Item>
-      </Form>
-    </Col>
+    <SignupPage>
+      <div className="body-form">
+        <Form layout="vertical" form={form} onFinish={onFinish}>
+          <Form.Item label="Email" className="username" name="email">
+            <Input placeholder="" />
+          </Form.Item>{" "}
+          <Form.Item
+            label="Mật khẩu"
+            className="password"
+            name="password"
+            rules={[
+              { required: true, message: "Không được để trống!" },
+              {
+                min: 6,
+                message: "Password tối thiểu 6 kí tự",
+              },
+            ]}
+          >
+            <Input.Password placeholder="" />
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              block
+              danger
+              className="btn-sm"
+            >
+              Đăng nhập
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
+      <div className="logo-signup">
+        <img src={image} alt="" />
+      </div>
+    </SignupPage>
   );
 };
 
-export default SigninPage;
+const SignupPage = styled.div`
+  width: 800px;
+  height: 508px;
+  margin: auto;
+  display: flex;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  border-radius: 10px;
+  /* align-items: center; */
+  .body-form {
+    padding: 80px 45px;
+    width: 500px;
+  }
+  .ant-form-item-label > label {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .ant-input {
+    width: 410px;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+  }
+  .btn-sm {
+    width: 410px;
+    height: 48px;
+    border-radius: 0px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+  .logo-signup {
+    width: calc(100% - 500px);
+    background: #f8f8f8;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export default Signin;

@@ -12,6 +12,8 @@ import AddCategoriesPage from "./pages/Admin/Categories/Add";
 import CategoriesAdminPage from "./pages/Admin/Categories/categories";
 import EditProductPage from "./pages/Admin/Product/Product_Edit";
 import SignupPage from "./pages/Auth/signup";
+import Cart from "./pages/Home/Cart";
+import PrivateRouter from "./api/PrivateRouter";
 
 function App(props: any) {
   return (
@@ -24,9 +26,18 @@ function App(props: any) {
         <Route path="/" element={<UserLayout />}>
           <Route index element={<HomePage />} />
           <Route path="detail/:id" element={<DetailPage />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
         {/* Admin layout */}
-        <Route path="admin" element={<AdminLayout />}>
+        <Route
+          path="admin"
+          element={
+            <PrivateRouter>
+              {" "}
+              <AdminLayout />
+            </PrivateRouter>
+          }
+        >
           <Route index element={<ProductAdminPage />} />
           <Route path="product/add" element={<AddProductPage />} />
           <Route path="categories" element={<CategoriesAdminPage />} />

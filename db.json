@@ -9,6 +9,13 @@
       "email": "member@gmail.com",
       "password": "$2a$10$q0LkTwtBw3fe03qJzGjgEOOkNrud6yTDwRbMVTupknl6CRWQc67ou",
       "id": 2
+    },
+    {
+      "email": "nvduy123@gmail.com",
+      "password": "$2a$10$AKBAqEy6YYPeDC./SkcIMerSV2bQLcPbK5Pt8z3F997Ar68otpj1q",
+      "sdt": "0852",
+      "status": 0,
+      "id": 3
     }
   ],
   "categories": [

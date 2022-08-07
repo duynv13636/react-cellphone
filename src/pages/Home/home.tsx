@@ -65,7 +65,7 @@ const HomePage = () => {
               products.map((product, index) => {
                 return (
                  
-                  <Col className="gutter-row" span={4} style={style}>
+                  <Col className="gutter-row" span={4} style={style} key={index}>
                     <div>
                       <Card
                         hoverable
