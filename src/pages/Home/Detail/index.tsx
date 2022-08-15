@@ -44,7 +44,7 @@ const items2: MenuProps["items"] = [
 ];
 
 const DetailPage = () => {
-  const [product, setProduct] = useState<ProductType[]>([]);
+  const [product, setProduct] = useState<ProductType>();
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -130,7 +130,7 @@ const DetailPage = () => {
               <div>
                 <Text>
                   {" "}
-                 {product.description}
+                 {product?.description}
                 </Text>
               </div>
 

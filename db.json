@@ -16,6 +16,13 @@
       "sdt": "0852",
       "status": 0,
       "id": 3
+    },
+    {
+      "email": "nvduy1234@gmail.com",
+      "password": "$2a$10$FABW.pManLU2irl2yfV/DuCV24NXvQrMqd4FW3WtMteEIJk4mtp3S",
+      "sdt": "0852767256",
+      "status": 0,
+      "id": 4
     }
   ],
   "categories": [
