@@ -81,7 +81,7 @@ const DetailPage = () => {
         </div>
         <hr />
         <div>
-          <h3>Samsung Galaxy A73 (5G) 256GB</h3>
+          <h3>{product?.name}</h3>
         </div>
         <hr />
 
@@ -119,11 +119,20 @@ const DetailPage = () => {
                 <Row>
                   <Col span={8}>
                     <Title level={2} type="danger">
-                     {product?.originalPrice}đ
+                     {/* {product?.originalPrice}đ */}
+                     {product?.originalPrice.toLocaleString("vi-VN", {
+                      style: "currency",
+                      currency: "VND",
+                    })}
                     </Title>
                   </Col>
                   <Col span={4}>
-                    <Text>{product?.saleOffPrice}đ</Text>
+                    <Text>
+                    {product?.saleOffPrice.toLocaleString("vi-VN", {
+                      style: "currency",
+                      currency: "VND",
+                    })}
+                    </Text>
                   </Col>
                 </Row>
               </div>
@@ -137,7 +146,7 @@ const DetailPage = () => {
               <Dv3>
                 <Row>
                   <Col span={10}>
-                    <button onClick={()=>addToCart(product)}>Mua Ngay</button>
+                    <Button onClick={()=>addToCart(product)}>Mua Ngay</Button>
                   </Col>
                   <Col span={4}>
                     <Bot1>

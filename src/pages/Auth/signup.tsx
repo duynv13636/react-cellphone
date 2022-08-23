@@ -2,7 +2,7 @@ import { Button, Col, Form, Input, message, Row } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { signup } from "../../api/users";
+import { signin, signup } from "../../api/users";
 import image from "../../assets/images/logo.png";
 
 type Props = {};
@@ -21,10 +21,20 @@ const Signup = (props: Props) => {
         status: 0,
       });
       if (data) {
-        message.success("Đăng kí tài khoản thành công!");
-        setTimeout(() => {
-          navigate("/signin");
-        }, 2000);
+        const data = await signin({
+          email: value.email,
+          password: value.password,
+        })
+        console.log(data);
+        message.success("bạn đang nhập thành công");
+        localStorage.setItem("user1",JSON.stringify(data.data));
+        navigate("/")
+        // message.success("Đăng kí tài khoản thành công!");
+        // setTimeout(() => {
+        //   navigate("/signin");
+        // }, 2000);
+        // navigate("/");
+
       }
     } catch (error) {
       console.log(error);

@@ -19,7 +19,7 @@ const Signin = (props: Props) => {
         password: value.password,
       });
       if (data) {
-        localStorage.setItem("username",JSON.stringify(data))
+        localStorage.setItem("username", JSON.stringify(data));
         message.success("Đăng nhập thành công chuyển trang sau 2s !");
         setTimeout(() => {
           navigate("/");

@@ -10,7 +10,11 @@ import {
 } from "@ant-design/icons";
 const { Paragraph } = Typography;
 import type { ColumnsType } from "antd/es/table";
-import { deleteProduct, getAll, getProductCategory } from "../../../api/product";
+import {
+  deleteProduct,
+  getAll,
+  getProductCategory,
+} from "../../../api/product";
 import { ProductType } from "../../../types/Product";
 import { CategoriesType } from "../../../types/Category";
 import { getAllCategory } from "../../../api/categories";
@@ -48,6 +52,11 @@ const ProductAdminPage = () => {
       dataIndex: "feature",
       key: "feature",
       render: (text) => <a>{text}</a>,
+    },
+    {
+      title: "Giá gốc",
+      dataIndex: "originalPrice",
+      key: "originalPrice",
     },
     {
       title: "Giá khuyến mãi",
@@ -124,14 +133,14 @@ const ProductAdminPage = () => {
     };
     getCategory();
   }, []);
-  const handlechange = async (value:any) => {
-if(value === undefined){
-  const { data } = await getAllCategory();
- setDataTable(data);
-}else{
-  const { data } = await getProductCategory(value);
- setDataTable(data);
-}
+  const handlechange = async (value: any) => {
+    if (value === undefined) {
+      const { data } = await getAllCategory();
+      setDataTable(data);
+    } else {
+      const { data } = await getProductCategory(value);
+      setDataTable(data);
+    }
   };
   const { Option } = Select;
   return (
@@ -163,11 +172,9 @@ if(value === undefined){
     </>
   );
 };
-
 const Breadcrumb = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 `;
-
 export default ProductAdminPage;

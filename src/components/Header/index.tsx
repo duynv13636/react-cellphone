@@ -14,7 +14,7 @@ const Header = (props: Props) => {
   const [auth, setAuth] = useState<any>();
   useEffect(() => {
     const getAuth = () => {
-      setAuth(JSON.parse(localStorage.getItem("username") as string));
+      setAuth(JSON.parse(localStorage.getItem("user1") as string));
     };
     getAuth();
   }, []);

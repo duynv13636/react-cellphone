@@ -14,7 +14,7 @@
       "email": "nvduy123@gmail.com",
       "password": "$2a$10$AKBAqEy6YYPeDC./SkcIMerSV2bQLcPbK5Pt8z3F997Ar68otpj1q",
       "sdt": "0852",
-      "status": 0,
+      "status": 1,
       "id": 3
     },
     {
@@ -23,6 +23,13 @@
       "sdt": "0852767256",
       "status": 0,
       "id": 4
+    },
+    {
+      "email": "abc1@gmail.com",
+      "password": "$2a$10$4.Zzf69ms1yXV0lu27Qbvu4vV/ltmenxIp0ysTQuXRcTPYPGmaT3m",
+      "sdt": "0852767256",
+      "status": 0,
+      "id": 5
     }
   ],
   "categories": [
@@ -54,33 +61,6 @@
       "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658451118/kj8wih8og4k6fvsjoubj.jpg"
     },
     {
-      "img": "http://res.cloudinary.com/thaicodejj/image/upload/v1658251263/y6szraxlievkpkwbiohk.jpg",
-      "name": "dvddvdv",
-      "saleOffPrice": 2,
-      "feature": "fnfnf",
-      "description": "fnfnn",
-      "categoryId": 3,
-      "id": 18
-    },
-    {
-      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658276371/v6qnacyjf2pg1hgrsq7c.jpg",
-      "name": "dvdvdvd",
-      "saleOffPrice": 5,
-      "feature": "scscs",
-      "description": "scscs",
-      "categoryId": 2,
-      "id": 19
-    },
-    {
-      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658279109/n4fj6qyadntmc6ul4pvj.jpg",
-      "name": "dvd",
-      "saleOffPrice": 5,
-      "feature": "scsc",
-      "description": "svsvv",
-      "categoryId": 1,
-      "id": 20
-    },
-    {
       "id": 21,
       "name": "gnng",
       "originalPrice": 10,
@@ -90,39 +70,24 @@
       "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1658451870/ju6aqpsdsukxmtmhpti4.jpg"
     },
     {
-      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1659429351/j9149mldnovqbdg0en7c.jpg",
-      "name": "duynvph136360000",
+      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1660558893/ipkxbitxfzp8swrrcqiv.png",
+      "name": "duynvph13636",
       "saleOffPrice": 20,
-      "feature": "522",
-      "description": "5252",
+      "feature": "vggngn",
+      "description": "gngngngn",
       "categoryId": 2,
-      "id": 22
+      "originalPrice": 50,
+      "id": 26
     },
     {
-      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1659499517/yj5skvahcan8e8bua7hy.jpg",
-      "name": "duynvph13636",
-      "saleOffPrice": 5,
-      "feature": "trnnt",
-      "description": "nnynyn",
-      "categoryId": 2,
-      "id": 23
-    },
-    {
-      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1659499584/aozgapjd7oilc1suw7jd.jpg",
-      "name": "duynvph13636",
-      "saleOffPrice": 42,
-      "feature": "nnhgnh",
-      "description": "nghnhgnhg",
-      "categoryId": 2,
-      "id": 24
-    },
-    {
-      "name": "đồ chơi trẻ em ",
-      "saleOffPrice": 5,
-      "feature": "rdrbfv",
-      "description": "yymnghng",
-      "categoryId": 2,
-      "id": 25
+      "img": "http://res.cloudinary.com/fpolyduy/image/upload/v1660696588/tf1mb4kxcbappkj3vgmh.png",
+      "name": "Lò Nướng Chân Không Điện Tử Lock&amp;Lock EJF291BLK 10L - Hàng Chính Hãng",
+      "saleOffPrice": 2899000,
+      "feature": " Lò Nướng Chân Không Điện Tử Lock&amp;Lock EJF291BLK sở hữu thiết kế nhỏ gọn nhưng vẫn\nsang trọng, màu đen hiện đại, phù hợp với bất kỳ không gian căn bếp nào. Cửa sổ sản phẩm làm bằng\n\nkính cường lực trong suốt, bền và an toàn khi sử dụng, giúp bạn dễ dàng quan sát các món ăn được\nnấu bên trong.\n Kết nối liền mạch giữa các thiết bị, trình chiếu không dây nâng tầm hiệu quả\n Thiết kế thanh lịch, tối giản hoà hợp với mọi không gian làm việc.",
+      "description": "Kiểu dáng sang trọng, nhỏ gọn\nLò Nướng Chân Không Điện Tử Lock&amp;Lock EJF291BLK sở hữu thiết kế nhỏ gọn nhưng vẫn sang\ntrọng, màu đen hiện đại, phù hợp với bất kỳ không gian căn bếp nào. Cửa sổ sản phẩm làm bằng kính\ncường lực trong suốt, bền và an toàn khi sử dụng, giúp bạn dễ dàng quan sát các món ăn được nấu\nbên trong. Bên cạnh đó, Lock&amp;Lock EJF291BLK có bảng điều khiển cảm ứng, dễ dàng sử dụng, bạn\ncó thể tùy chỉnh thời gian và nhiệt độ cho phù hợp với từng món ăn khác nhau.\nDung tích 10L, thỏa mái sử dụng\nLock&amp;Lock EJF291BLK với dung tích 10L là lựa chọn tuyệt vời đối với những gia đình có ít thành viên,\ncó thể sử dụng cho tất cả các loại thịt cá và rau củ. Các chức năng của lò được điều khiển dễ dàng\nthông qua núm vặn, rất phù hợp với những người mới bắt đầu sử dụng lò nướng hiện đại.\nCông nghệ làm chín thực phẩm hiện đại\nSản phẩm làm chín thực phẩm bằng các luồng không khí lốc xoáy thay vì dầu nóng, giúp bạn chế\nbiến món ăn lành mạnh hơn. Sản phẩm còn được trang bị bộ lọc mùi và khói. Là sự tổng hợp của\nnhiều thiết bị và dụng cụ nấu nướng, với bộ hẹn giờ kỹ thuật số được tích hợp chế độ tự động tắt.\nĐa dạng chức năng nấu\nCó tới tận 8 menu nấu mặc định, bạn có thể sử dụng sản phẩm để chế biến nhiều món ăn khác nhau.\nCó thêm các phụ kiện đi kèm khi mua, bạn có thể chọn các phụ kiện nấu phù hợp với nguyên liệu.\nGiá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm,\nhình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí\nhàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      "categoryId": 1,
+      "originalPrice": 6180000,
+      "id": 27
     }
   ]
 }

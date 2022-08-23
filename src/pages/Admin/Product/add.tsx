@@ -34,7 +34,7 @@ const AddProductPage = () => {
     console.log("Success:", values);
     const imgLink = await upload(fileList[0]);
     console.log(imgLink);
-    
+
     const valueAdd = {
       img: imgLink,
       name: values.name,
@@ -42,6 +42,7 @@ const AddProductPage = () => {
       feature: values.feature,
       description: values.description,
       categoryId: values.categoriesId,
+      originalPrice: values.originalPrice,
     };
     try {
       const data = await createProduct(valueAdd);
@@ -50,7 +51,6 @@ const AddProductPage = () => {
     } catch (err) {
       message.error("Có lỗi xảy ra");
     }
-    handleFile();
   };
   useEffect(() => {
     const getCategory = async () => {
@@ -61,9 +61,7 @@ const AddProductPage = () => {
     };
     getCategory();
   }, []);
-  const handleFile = () => {
-    console.log();
-  };
+
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
@@ -160,7 +158,7 @@ const AddProductPage = () => {
                   dependencies={["originalPrice"]}
                   labelCol={{ span: 24 }}
                   rules={[
-                    { required: true, message: "Giá sản phẩm"},
+                    { required: true, message: "Giá sản phẩm" },
                     ({ getFieldValue }) => ({
                       validator(_, value) {
                         if (!value || getFieldValue("originalPrice") <= value) {
@@ -176,7 +174,7 @@ const AddProductPage = () => {
                   <InputNumber
                     style={{ width: "100%" }}
                     size="large"
-                    placeholder="Giá giảm "
+                    placeholder="Giá giảm"
                   />
                 </Form.Item>
               </Col>
@@ -191,7 +189,6 @@ const AddProductPage = () => {
                     style={{ width: "100%" }}
                     size="large"
                     placeholder="Phân loại "
-                  
                   >
                     {category.map((item, index) => (
                       <Option value={item.id} key={index}>
